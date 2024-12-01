@@ -7,14 +7,18 @@ class cleanedData():
         self.file_path = file_path
         self.file_type = file_path.split('.')[-1]
         # self.data 完整数据; self.label 带有标签的数据; self.target 数据的最终值
+        # self.data: complete data; self.labels: labeled data; self.target: final target values
         self.data, self.labels, self.target = None, None, None
 
     # 对数据进行基本处理
+    # Basic data processing
     def dataRead(self, columns_exclude: list):
         if self.file_type.lower() == 'csv':
             # 读取数据
+            # Read the data
             self.data = pd.read_csv(self.file_path)
             # 数据切片（划分为标签和目标，同时去掉索引列）
+            # Data slicing (divide into labels and target, while removing index columns)
             self.target = self.data.iloc[:, -1]
             self.labels = copy.deepcopy(self.data)
             self.labels = self.labels.drop(columns=columns_exclude)
@@ -26,6 +30,7 @@ class cleanedData():
         if type:
             data = copy.deepcopy(self.data)
             # 删除数据有误的行
+            # Remove rows with incorrect data
             for index, column in enumerate(columns_clean):
                 data = data[~((data[column] > corresponding_args[index][0]) & (data[column] < corresponding_args[index][1]))]
 
