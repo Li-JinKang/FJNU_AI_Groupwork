@@ -1,6 +1,6 @@
 # Classification Model for Imbalanced Three-Class Dataset
 
-This repository contains the implementation of a classification model aimed at solving a three-class classification problem with imbalanced data. The goal of this project was to predict the target variable, which contains three possible classes: `0`, `1`, and `2`. Class `0` represents the majority class, with approximately 80% of the data, class `2` contains around 15%, and class `1` has a very small representation.
+This repository contains the implementation of a classification model aimed at solving a three-class classification problem with imbalanced data. The goal of this project was to predict the target variable, which contains three possible classes: `0`, `1`, and `2`. Class `0` represents the majority class, with approximately 84% of the data, class `2` contains around 14%, and class `1` has a very small representation.
 
 ## Project Overview
 
@@ -27,38 +27,6 @@ In this project, we experimented with multiple machine learning models and data 
 - numpy
 - matplotlib
 - imbalanced-learn (for SMOTE)
-
-## How to Run the Code
-
-1. Clone the repository:
-
-   ```
-   bash
-   
-   
-   复制代码
-   git clone https://github.com/yourusername/repository-name.git
-   ```
-
-2. Install dependencies:
-
-   ```
-   bash
-   
-   
-   复制代码
-   pip install -r requirements.txt
-   ```
-
-3. Run the script to train the model:
-
-   ```
-   bash
-   
-   
-   复制代码
-   python model_training.py
-   ```
 
 ## Model Results
 
